@@ -1,3 +1,2 @@
-# Car-Game
+# Page
 
-Credits: (to the owner)
