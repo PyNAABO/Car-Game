@@ -1,0 +1,22 @@
+{
+  "name": "race-game",
+  "version": "1.0.0",
+  "description": "A 3D racing game built with Three.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "threejs",
+    "game",
+    "racing",
+    "webgl",
+    "javascript"
+  ],
+  "author": "Original Creator",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
