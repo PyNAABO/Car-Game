@@ -247,53 +247,56 @@
     <script src="js/AIVehicle.js"></script>
     <script src="js/GameManager.js"></script>
     <script>
-        // Main game initialization
-        const game = new GameManager();
-        game.init();
-        
-        // Start screen event listeners
-        document.getElementById('startButton').addEventListener('click', () => {
-            document.getElementById('startScreen').style.display = 'none';
-            game.startRace();
-        });
-        
-        // Difficulty selection
-        document.querySelectorAll('.difficultyBtn[data-difficulty]').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.difficultyBtn[data-difficulty]').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                game.setDifficulty(this.dataset.difficulty);
+        // Wait for DOM to load before initializing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Main game initialization
+            const game = new GameManager();
+            game.init();
+            
+            // Start screen event listeners
+            document.getElementById('startButton').addEventListener('click', () => {
+                document.getElementById('startScreen').style.display = 'none';
+                game.startRace();
             });
-        });
-        
-        // Pause menu
-        document.getElementById('resumeButton').addEventListener('click', () => {
-            document.getElementById('pauseMenu').style.display = 'none';
-            game.resumeGame();
-        });
-        
-        document.getElementById('restartButton').addEventListener('click', () => {
-            document.getElementById('pauseMenu').style.display = 'none';
-            game.restartRace();
-        });
-        
-        document.getElementById('quitButton').addEventListener('click', () => {
-            document.getElementById('pauseMenu').style.display = 'none';
-            document.getElementById('startScreen').style.display = 'flex';
-            game.quitToMenu();
-        });
-        
-        // Keyboard controls for pause
-        window.addEventListener('keydown', (event) => {
-            if (event.key === 'p' || event.key === 'P') {
-                if (!game.isPaused()) {
-                    document.getElementById('pauseMenu').style.display = 'flex';
-                    game.pauseGame();
-                } else {
-                    document.getElementById('pauseMenu').style.display = 'none';
-                    game.resumeGame();
+            
+            // Difficulty selection
+            document.querySelectorAll('.difficultyBtn[data-difficulty]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.difficultyBtn[data-difficulty]').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    game.setDifficulty(this.dataset.difficulty);
+                });
+            });
+            
+            // Pause menu
+            document.getElementById('resumeButton').addEventListener('click', () => {
+                document.getElementById('pauseMenu').style.display = 'none';
+                game.resumeGame();
+            });
+            
+            document.getElementById('restartButton').addEventListener('click', () => {
+                document.getElementById('pauseMenu').style.display = 'none';
+                game.restartRace();
+            });
+            
+            document.getElementById('quitButton').addEventListener('click', () => {
+                document.getElementById('pauseMenu').style.display = 'none';
+                document.getElementById('startScreen').style.display = 'flex';
+                game.quitToMenu();
+            });
+            
+            // Keyboard controls for pause
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'p' || event.key === 'P') {
+                    if (!game.isPaused()) {
+                        document.getElementById('pauseMenu').style.display = 'flex';
+                        game.pauseGame();
+                    } else {
+                        document.getElementById('pauseMenu').style.display = 'none';
+                        game.resumeGame();
+                    }
                 }
-            }
+            });
         });
     </script>
 </body>
