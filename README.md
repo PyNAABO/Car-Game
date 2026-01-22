@@ -1,44 +1,62 @@
-# Race Game
+# World-Class Racing Simulator
 
-A 3D racing game built with Three.js. This is a web-based car racing game with multiple difficulty levels and responsive controls.
+Experience the ultimate racing simulation with realistic physics, stunning visuals, and immersive gameplay. Race through challenging tracks, compete against AI opponents, and push your skills to the limit.
 
 ## Features
 
-- 3D graphics powered by Three.js
-- Multiple difficulty levels (Easy, Medium, Hard, Brutal)
-- Responsive controls (keyboard arrows, A/D keys, or touch drag)
-- Score tracking
-- Smooth animations and transitions
+- **Realistic Physics Engine**: Powered by Cannon.js for authentic vehicle dynamics
+- **Advanced Graphics**: Modern Three.js rendering with shadows, lighting, and post-processing
+- **Multiple Camera Modes**: Chase, hood, and cockpit views for immersive experience
+- **Dynamic Environment**: Procedurally generated tracks with day/night cycles
+- **AI Opponents**: Challenging AI vehicles with difficulty settings
+- **Professional HUD**: Speedometer, RPM gauge, gear indicator, and damage system
+- **Race Management**: Lap tracking, timing, position systems
+- **Damage System**: Visual feedback for vehicle damage
+- **Weather Effects**: Dynamic weather conditions (implementation ready)
 
 ## Controls
 
-- **Steering**: A/D keys, Left/Right arrow keys, or drag left/right on screen
-- **Restart**: Click the replay button when game is over
+- **W**: Accelerate
+- **S**: Brake/Reverse
+- **A/D**: Steer Left/Right
+- **Space**: Handbrake
+- **R**: Reset Car Position
+- **C**: Change Camera Mode
+- **P**: Pause Game
 
-## Technologies Used
+## Technical Specifications
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Three.js (3D graphics library)
-- Responsive design techniques
+- **Graphics Engine**: Three.js r128+
+- **Physics Engine**: Cannon-es
+- **Rendering**: WebGL with advanced lighting
+- **Collision Detection**: Physics-based
+- **Audio**: Spatial audio system (ready for implementation)
 
-## How It Works
+## Installation
 
-The game uses Three.js to render a 3D racing environment. Players control a car on a procedurally generated track, trying to avoid other vehicles while scoring points. The difficulty increases with higher levels, affecting opponent speed and game mechanics.
+1. Clone the repository
+2. Open `index.html` in a modern browser
+3. Or run with a local server: `npm install` then `npm start`
 
-## Setup and Usage
+## System Requirements
 
-To run this game locally:
+- Modern browser with WebGL support
+- Recommended: Chrome, Firefox, Edge (latest versions)
+- Minimum: 4GB RAM, dedicated GPU preferred
 
-1. Clone or download the repository
-2. Open `index.html` in a modern web browser
-3. Select a difficulty level and start playing
+## Development
 
-## Credits
-
-This game was originally created by an unknown developer. The Three.js library is used under its respective license. This repository serves as a preservation and demonstration of the original work.
+The game is structured with modular JavaScript classes for easy expansion:
+- `GameManager.js`: Core game logic and state management
+- `CarController.js`: Vehicle physics and input handling
+- `TrackGenerator.js`: Procedural track generation
+- `AIVehicle.js`: AI opponent behavior
 
 ## License
 
-This project is provided as-is without any explicit license. The original author's rights are acknowledged. If you are the original creator and wish to claim this work or set specific terms, please contact us.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Credits
+
+Created with ❤️ by the World-Class Racing Studio team.
+Special thanks to the Three.js and Cannon.js communities.
