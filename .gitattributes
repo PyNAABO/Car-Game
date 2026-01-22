@@ -1,1 +1,25 @@
-*.mkv filter=lfs diff=lfs merge=lfs -text
+# Set the default behavior to automatically normalize line endings
+* text=auto
+
+# Force the following file types to be handled as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.7z binary
+*.rar binary
+*.exe binary
+*.dll binary
+*.so binary
+*.bin binary
+
+# Handle JSON files consistently
+*.json text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
